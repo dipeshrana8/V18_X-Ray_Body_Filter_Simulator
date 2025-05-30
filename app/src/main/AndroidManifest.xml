@@ -2,25 +2,105 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <queries>
+        <package android:name="com.android.chrome" />
+    </queries>
+
     <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:name=".LaunchCoordinator"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:largeHeap="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.XRayBodyFilterSimulator"
+        android:theme="@style/Theme.XScanner"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".uientry.SkinToneActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".uientry.PriviewActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".uientry.FaceActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".uientry.MuscularActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".uientry.SideBodyActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".uientry.UpperActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".uientry.AppLauncherActivity"
+            android:exported="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".uientry.StartActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".uientry.MainBaseActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".uientry.AppIntroActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".uientry.GenderSelectionActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".uientry.ExitScreenActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".uientry.A4_PrivacyActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".uientry.PrivacyActivity"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>
